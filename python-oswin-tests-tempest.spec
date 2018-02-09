@@ -79,7 +79,6 @@ Requires:    python3-winrm
 %{common_desc}
 %endif
 
-
 %prep
 %autosetup -n %{plugin}-%{upstream_version} -S git
 
@@ -128,4 +127,3 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
-
