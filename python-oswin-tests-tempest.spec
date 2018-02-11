@@ -23,19 +23,8 @@ URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
 
 BuildArch:  noarch
-
-BuildRequires:    python2-devel
-BuildRequires:    python2-pbr
-BuildRequires:    python2-setuptools
 BuildRequires:    git
 BuildRequires:    openstack-macros
-
-Requires:    python2-pbr >= 2.0
-Requires:    python-oslo-config
-Requires:    python-oslo-log >= 3.22.0
-Requires:    python-oslo-utils >= 3.20.0
-Requires:    python-tempest >= 16.1.0
-Requires:    python2-winrm
 
 %description
 %{common_desc}
@@ -43,17 +32,26 @@ Requires:    python2-winrm
 package -n python2-%{service}
 Summary: python-%{service}
 %{?python_provide:%python_provide python2-%{service}}
+BuildRequires:    python2-devel
+BuildRequires:    python2-pbr
+BuildRequires:    python2-setuptools
+
+Requires:    python2-pbr >= 2.0.0
+Requires:    python2-oslo-config >= 2:4.0.0
+Requires:    python2-oslo-log >= 3.22.0
+Requires:    python2-oslo-utils >= 3.20.0
+Requires:    python2-tempest >= 1:17.2.0
+Requires:    python2-winrm
 
 %description -n python-%{service}
 %{common_desc}
-
 
 %if 0%{?with_doc}
 %package -n python-%{service}-doc
 Summary: python-%{service} documentation
 
-BuildRequires:    python-sphinx
-BuildRequires:    python-oslo-sphinx
+BuildRequires:    python2-sphinx
+BuildRequires:    python2-oslo-sphinx
 
 %description -n python-%{service}-doc
 It contains the documentation for the os-win tempest plugin.
@@ -68,12 +66,12 @@ BuildRequires:    python3-devel
 BuildRequires:    python3-pbr
 BuildRequires:    python3-setuptools
 
-Requires:    python3-pbr
-Requires:    python3-tempest >= 1:16.1.0
-Requires:    python3-oslo-utils
-Requires:    python3-oslo-log
-Requires:    python3-oslo-config
-Requires:    python3-winrm
+Requires:    python2-pbr >= 2.0.0
+Requires:    python2-oslo-config >= 2:4.0.0
+Requires:    python2-oslo-log >= 3.22.0
+Requires:    python2-oslo-utils >= 3.20.0
+Requires:    python2-tempest >= 1:17.2.0
+Requires:    python2-winrm
 
 %description -n python3-%{service}
 %{common_desc}
