@@ -1,9 +1,13 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit ef0396e1868e1c851c8cc6c99904d6216e7aacc2
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 %global module oswin_tempest_plugin
 %global plugin oswin-tempest-plugin
 %global service oswin-tests-tempest
 %global with_doc 1
-
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %if 0%{?fedora}
 %global with_python3 1
@@ -14,13 +18,13 @@ This package contains Tempest tests to cover the os-win project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.1
+Release:    0.2%{?alphatag}%{?dist}
 Summary:    Tempest Integration of os-win Project
 
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    http://github.com/openstack/%{plugin}/archive/%{commit}.tar.gz#/%{plugin}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:    git
@@ -125,3 +129,5 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Tue Aug 28 2018 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.2.ef0396e1git
+- Update to pre-release 0.0.1 (ef0396e1868e1c851c8cc6c99904d6216e7aacc2)
