@@ -18,8 +18,8 @@ This package contains Tempest tests to cover the os-win project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}
-Version:    0.0.1
-Release:    0.2%{?alphatag}%{?dist}
+Version:    0.1.0
+Release:    1%{?alphatag}%{?dist}
 Summary:    Tempest Integration of os-win Project
 
 License:    ASL 2.0
@@ -129,5 +129,8 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Thu Sep 06 2018 RDO <dev@lists.rdoproject.org> 0.1.0-1.ef0396egit
+- Update to 0.1.0
+
 * Tue Aug 28 2018 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.2.ef0396e1git
 - Update to pre-release 0.0.1 (ef0396e1868e1c851c8cc6c99904d6216e7aacc2)
