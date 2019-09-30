@@ -22,8 +22,8 @@ Additionally it provides a plugin to automatically load these \
 tests into Tempest.
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.3.0
+Release:    1%{?dist}
 Summary:    Tempest Integration of os-win Project
 
 License:    ASL 2.0
@@ -99,3 +99,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 0.3.0-1
+- Update to 0.3.0
+
