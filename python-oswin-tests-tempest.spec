@@ -12,7 +12,12 @@
 %global module oswin_tempest_plugin
 %global plugin oswin-tempest-plugin
 %global service oswin-tests-tempest
+# oslosphinx do not work with sphinx > 2
+%if %{pyver} == 3
+%global with_doc 0
+%else
 %global with_doc 1
+%endif
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
