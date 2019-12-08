@@ -12,7 +12,8 @@
 %global module oswin_tempest_plugin
 %global plugin oswin-tempest-plugin
 %global service oswin-tests-tempest
-%global with_doc 1
+# oslosphinx do not work with sphinx > 2
+%global with_doc 0
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
