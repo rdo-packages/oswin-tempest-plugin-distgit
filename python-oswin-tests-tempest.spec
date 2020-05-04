@@ -102,3 +102,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 * Thu Apr 04 2019 RDO <dev@lists.rdoproject.org> 0.2.0-1
 - Update to 0.2.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/oswin-tempest-plugin/commit/?id=801924705cba699f1e6c33a9e092a48306067295
