@@ -101,4 +101,3 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %changelog
 * Thu Apr 04 2019 RDO <dev@lists.rdoproject.org> 0.2.0-1
 - Update to 0.2.0
-
