@@ -117,3 +117,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/oswin-tempest-plugin/commit/0976964257d926742798e4f0f0cde711c354961d
